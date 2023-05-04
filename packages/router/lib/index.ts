@@ -20,4 +20,5 @@ export const createService = async (
   return createServiceConfiguration(serviceName, functions, port, environment);
 };
 
+export * as arktype from "arktype";
 export * from "./types/methods";
