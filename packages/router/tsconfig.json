@@ -4,6 +4,7 @@
     "strict": true,
     "skipLibCheck": true,
     "declaration": true,
+    "declarationMap": true,
     "outDir": "dist",
     "rootDirs": ["lib", "tests"],
     "baseUrl": "lib",
