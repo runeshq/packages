@@ -1,0 +1,26 @@
+{
+  "name": "@runes/router",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . -c ../../package.json --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/parser": "^7.21.2",
+    "@babel/traverse": "^7.21.2",
+    "@babel/types": "^7.21.2",
+    "@serverless/typescript": "^3.27.0",
+    "@types/aws-lambda": "^8.10.115",
+    "@types/babel__parser": "^7.1.1",
+    "@types/babel__traverse": "^7.18.3",
+    "arktype": "1.0.14-alpha",
+    "aws-lambda": "^1.0.7"
+  }
+}
