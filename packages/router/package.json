@@ -1,7 +1,7 @@
 {
   "name": "@runes/router",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.js",
@@ -12,9 +12,11 @@
   "keywords": [],
   "author": "Rida F'kih <hello@rida.dev>",
   "license": "ISC",
+  "dependencies": {
+    "@babel/traverse": "^7.21.2"
+  },
   "devDependencies": {
     "@babel/parser": "^7.21.2",
-    "@babel/traverse": "^7.21.2",
     "@babel/types": "^7.21.2",
     "@serverless/typescript": "^3.27.0",
     "@types/aws-lambda": "^8.10.115",
