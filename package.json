@@ -2,7 +2,8 @@
   "name": "@runes/packages",
   "private": true,
   "scripts": {
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "build": "turbo build"
   },
   "keywords": [],
   "author": "Rida F'kih <hello@rida.dev>",

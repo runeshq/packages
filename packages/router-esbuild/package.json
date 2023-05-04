@@ -5,7 +5,8 @@
   "main": "lib/index.ts",
   "types": "lib/index.ts",
   "scripts": {
-    "lint": "eslint . --config ../../package.json --ext .ts"
+    "lint": "eslint . -c ../../package.json --ext .ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Rida F'kih <hello@rida.dev>",
