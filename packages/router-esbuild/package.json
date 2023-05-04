@@ -1,0 +1,23 @@
+{
+  "name": "@runes/router-esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.ts",
+  "types": "lib/index.ts",
+  "scripts": {
+    "lint": "eslint . --config ../../package.json --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/generator": "^7.21.1",
+    "@babel/parser": "^7.21.2",
+    "@babel/traverse": "^7.21.2",
+    "@types/aws-lambda": "^8.10.111",
+    "@types/babel__generator": "^7.6.4",
+    "@types/babel__traverse": "^7.18.3",
+    "arktype": "1.0.8-alpha",
+    "esbuild": "^0.16.17"
+  }
+}
