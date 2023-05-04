@@ -51,7 +51,7 @@ const createRouterLoader = (basePath: string) => {
 
 export const RouterPlugin = ({ basePath }: RouterPluginOptions): Plugin => {
   return {
-    name: "@maxrewards/router-esbuild",
+    name: "@runes/router-esbuild",
     setup: ({ onLoad }) => {
       const { filter, handleLoad } = createRouterLoader(basePath);
       onLoad({ filter }, handleLoad);
