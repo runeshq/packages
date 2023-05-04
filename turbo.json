@@ -10,12 +10,10 @@
       "inputs": [".eslintrc", ".eslintignore"]
     },
     "test": {
-      "dependsOn": ["@maxrewards/vitest-config#build"],
       "inputs": ["**/vitest.config.ts", "**/src/**/*.ts"]
     },
     "test:watch": {
-      "cache": false,
-      "dependsOn": ["@maxrewards/vitest-config#build"]
+      "cache": false
     }
   }
 }
