@@ -8,7 +8,7 @@
     "lint": "eslint . -c ../../package.json --ext .ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rida F'kih <hello@rida.dev>",
   "license": "ISC",
   "devDependencies": {
     "@babel/parser": "^7.21.2",
