@@ -23,7 +23,7 @@ const HANDLER_CODEBLOCK = parse(mainHandlerCodeblock.join("\n"), {
   plugins: ["typescript"],
 });
 
-interface MaxRouterPluginOptions {
+interface RouterPluginOptions {
   basePath: string;
 }
 
@@ -49,11 +49,9 @@ const createRouterLoader = (basePath: string) => {
   };
 };
 
-export const MaxRouterPlugin = ({
-  basePath,
-}: MaxRouterPluginOptions): Plugin => {
+export const RouterPlugin = ({ basePath }: RouterPluginOptions): Plugin => {
   return {
-    name: "@maxrewards/maxrouter-esbuild",
+    name: "@maxrewards/router-esbuild",
     setup: ({ onLoad }) => {
       const { filter, handleLoad } = createRouterLoader(basePath);
       onLoad({ filter }, handleLoad);
