@@ -5,7 +5,7 @@
     "lint": "turbo lint"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rida F'kih <hello@rida.dev>",
   "license": "ISC",
   "eslintConfig": {
     "root": true,
