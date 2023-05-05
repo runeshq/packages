@@ -3,13 +3,13 @@
 <hr />
 
 ## Packages
+
 ### @runes/router
 
 The package named [@runes/router]() is a wrapper framework around the existing serverless framework. It provides easy-to-use functionality to quickly and easily build serverless APIs. It uses file-system based routing, exports [arktype]() for built-in validation, and more. It is opinionated, and pushes developers towards best-practice REST API development.
 
 ```ts
 /* src/routes/information.ts */
-
 import { type Method, arktype } from "@runes/router";
 import { writeFile } from "fs/promises";
 import { join } from "path";
@@ -17,19 +17,19 @@ import { join } from "path";
 const TARGET_VERSION_PATH = join(process.cwd(), "version.txt");
 
 export const schema = arktype.type({
-  version: "semver";
+  version: "semver",
 });
 
 type Response = {
   written: boolean;
 };
 
-export const PUT: Method.PUT<Response, typeof schema.infer> = async (event, context) => {
+export const PUT: Method.PUT<Response, typeof schema.infer> = async (event) => {
   const { version } = event.parsedBody;
 
   return writeFile(TARGET_VERSION_PATH, version, "utf-8")
-    .then(() => ({ status: 200, body: { written: true } }))
-    .catch(() => ({ status: 500, body: { written: false } }));
+    .then(() => ({ statusCode: 200, body: { written: true } }))
+    .catch(() => ({ statusCode: 500, body: { written: false } }));
 };
 ```
 
