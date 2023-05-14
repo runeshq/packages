@@ -16,6 +16,7 @@ export const createService = async (
   const directories = mapDirectoryToRoutes(basePath).map(
     ({ path, fullPath }) => ({ path, fullPath })
   );
+
   const functions = createFunctions(basePath, directories, serviceName);
   return createServiceConfiguration(serviceName, functions, port, environment);
 };

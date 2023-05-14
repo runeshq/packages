@@ -7,9 +7,11 @@ import type {
 
 type InferredType = Type["infer"];
 
+type MaybePromise<T> = Promise<T> | T;
+
 type APIGatewayNoBodyContext = Omit<APIGatewayProxyEvent, "body">;
 
-type APIGatewayResult<ResponseSchema> = Promise<
+type APIGatewayResult<ResponseSchema> = MaybePromise<
   Omit<APIGatewayProxyResult, "body"> & { body: ResponseSchema }
 >;
 
@@ -64,6 +66,6 @@ export namespace Method {
 export type Middleware = (
   event: APIGatewayProxyEvent,
   context: Context
-) => Promise<APIGatewayProxyResult | null | undefined | void>;
+) => MaybePromise<APIGatewayProxyResult | null | undefined | void>;
 
 export type Middlewares = Middleware[];
